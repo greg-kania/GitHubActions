@@ -19,8 +19,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      # By default, the runner will use Bash on Linux/MacOS runners
-      # Bash is supported on all runner types
+      # install node js
       - uses: actions/setup-node@v4
         with:
           node-version: 18
