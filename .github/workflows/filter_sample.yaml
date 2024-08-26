@@ -1,0 +1,20 @@
+name: "Lesson filters"
+
+on:
+  push:
+    branches:
+      - main
+      paths-ignore:
+        - "**.md"
+        - "**/**.md"
+jobs:
+  test:
+    runs-on: ubuntu-latest:
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Run test suite
+        run: |
+          echo "Running test...|
+          sleep 5
+          exit 0
