@@ -21,7 +21,6 @@ jobs:
 
       # By default, the runner will use Bash on Linux/MacOS runners
       # Bash is supported on all runner types
-      - name: install nodejs v 18*
       - uses: actions/setup-node@v4
         with:
           node-version: 18
