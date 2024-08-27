@@ -8,12 +8,10 @@ on:
       - "**.md"
       - "**/**.md"
 jobs:
-  test:
-    runs-on: ubuntu-latest:
+  build:
+    runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-
-      - name: Run test suite
+      - name: Experimenting
         run: |
           echo $MYVAR
           echo $ADDITION
