@@ -14,7 +14,7 @@ jobs:
           echo $MYVAR
           echo $ADDITION
           echo $EVENT
-          env:
-            MYVAR ${{ 'Hello' }}
-            ADDITION: ${{ 1 == 2 }}
-            EVENT: ${{ github.event_name }}
+        env:
+          MYVAR: ${{ 'Hello' }}
+          ADDITION: ${{ 1 == 2 }}
+          EVENT: ${{ github.event_name }}
