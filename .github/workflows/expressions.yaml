@@ -1,0 +1,24 @@
+name: "Lesson filters"
+
+on:
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - "**.md"
+      - "**/**.md"
+jobs:
+  test:
+    runs-on: ubuntu-latest:
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Run test suite
+        run: |
+          echo $MYVAR
+          echo $ADDITION
+          echo $EVENT
+        env:
+          MYVAR ${{'Hello'}} world
+          ADDITION: ${{ 1 == 2 }}
+          EVENT: ${{ github.event_name }}
