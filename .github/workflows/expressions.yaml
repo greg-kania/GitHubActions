@@ -1,12 +1,8 @@
 name: "Expressions"
 
 on:
-  push:
-    branches:
-      - main
-    paths-ignore:
-      - "**.md"
-      - "**/**.md"
+  workflow_dispatch:
+  
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -17,6 +13,6 @@ jobs:
           echo $ADDITION
           echo $EVENT
         env:
-          MYVAR ${{'Hello'}} world
+          MYVAR ${{ 'Hello' }} world
           ADDITION: ${{ 1 == 2 }}
           EVENT: ${{ github.event_name }}
