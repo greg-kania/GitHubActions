@@ -12,9 +12,11 @@ jobs:
       - name: Experimenting_Functions
         run: |
           echo $CONTAINS
+          echo $CONTAINS1
           echo $FORMAT
           echo $TO_JSON
         env:
           CONTAINS: ${{ contains('GitHub Actions', 'actions') }}
+          CONTAINS1: ${{ contains('GitHub Actions', 'Actions') }}
           FORMAT: ${{ format('This {0} {1}, 'is', 'cool') }}
           TO_JSON: ${{ toJSON(github.event) }}
