@@ -1,0 +1,20 @@
+name: "Expressions"
+
+on:
+  push:
+    branches:
+      - main
+  
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Experimenting
+        run: |
+          echo $MYVAR
+          echo $ADDITION
+          echo $EVENT
+        env:
+          MYVAR: ${{ contains('GitHub Actions', 'actions') }}
+          ADDITION: ${{ 1 == 2 }}
+          EVENT: ${{ github.event_name }}
