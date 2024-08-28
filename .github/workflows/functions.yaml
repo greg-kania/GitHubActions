@@ -11,10 +11,10 @@ jobs:
     steps:
       - name: Experimenting_Functions
         run: |
-          echo $MYVAR
-          echo $ADDITION
-          echo $EVENT
+          echo $CONTAINS
+          echo $FORMAT
+          echo $TO_JSON
         env:
-          MYVAR: ${{ contains('GitHub Actions', 'actions') }}
-          ADDITION: ${{ format('This {0} {1}, 'is', 'cool') }}
-          EVENT: ${{ toJSON(github.event) }}
+          CONTAINS: ${{ contains('GitHub Actions', 'actions') }}
+          FORMAT: ${{ format('This {0} {1}, 'is', 'cool') }}
+          TO_JSON: ${{ toJSON(github.event) }}
