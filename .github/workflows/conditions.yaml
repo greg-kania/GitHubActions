@@ -17,7 +17,7 @@ jobs:
           echo $CONTAINS1
           echo $FORMAT
           echo $TO_JSON
-          echo github.triggering_actor
+          echo ${{ github.triggering_actor }}
         env:
           CONTAINS: ${{ contains('GitHub Actions', 'actions') }}
           CONTAINS1: ${{ contains('GitHub Actions', 'Actions') }}
