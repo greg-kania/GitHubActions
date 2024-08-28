@@ -1,4 +1,4 @@
-name: "Expressions"
+name: "Functions"
 
 on:
   push:
